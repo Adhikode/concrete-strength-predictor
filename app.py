@@ -51,15 +51,13 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("Base Materials")
     for col in left_cols:
-        value = st.text_input(col, value="0")
-        inputs[col] = float(value) if value.strip() else 0.0
+        inputs[col] = st.number_input(col, min_value=0.0, value=0.0)
 
 # RIGHT COLUMN INPUTS
 with col2:
     st.subheader("Supplementary & Special Materials")
     for col in right_cols:
-        value = st.text_input(col, value="0")
-        inputs[col] = float(value) if value.strip() else 0.0
+        inputs[col] = st.number_input(col, min_value=0.0, value=0.0)
 
 # Concrete Type
 st.subheader("Concrete Type")

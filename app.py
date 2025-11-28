@@ -51,13 +51,13 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("Base Materials")
     for col in left_cols:
-        inputs[col] = st.number_input(col, min_value=0.0, value=0.0)
+        inputs[col] = st.number_input(col, min_value=0.0, value=0.0, format="%.0f")
 
 # RIGHT COLUMN INPUTS
 with col2:
     st.subheader("Supplementary & Special Materials")
     for col in right_cols:
-        inputs[col] = st.number_input(col, min_value=0.0, value=0.0)
+        inputs[col] = st.number_input(col, min_value=0.0, value=0.0, format="%.0f")
 
 # Concrete Type
 st.subheader("Concrete Type")
